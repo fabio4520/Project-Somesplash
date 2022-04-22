@@ -9,10 +9,10 @@
 
 # Seed one category
 
-# puts "Start seeding"
-# category = Category.create(
-#   name: "Wallpapers", 
-#   description: "From epic drone shots to inspiring moments in nature, find free HD wallpapers worthy of your screens."
-# )
-# category.cover.attach(io: "https://i.imgur.com/9v9zVYy.png", filename: "wallpaper_cover.png")
-# puts "Finish seeding"
+puts "Start seeding"
+category = Category.create(
+  name: "Wallpapers", 
+  description: "From epic drone shots to inspiring moments in nature, find free HD wallpapers worthy of your screens."
+)
+category.cover.attach(io: "https://i.imgur.com/9v9zVYy.png", filename: "wallpaper_cover.png")
+puts "Finish seeding"
