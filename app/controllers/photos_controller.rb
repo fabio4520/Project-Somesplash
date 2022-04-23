@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
+    @date = @photo.updated_at
   end
 
   # Metodos de paulo

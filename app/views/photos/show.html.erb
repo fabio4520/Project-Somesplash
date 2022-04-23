@@ -1,5 +1,6 @@
 <h2> <%= @photo.title %></h2>
 <p><%= @photo.subtitle %></p>
+<p><%= @date.strftime('Updated at %B %d, %Y') %></p>
 <p><%= params %></p>
 <% if @photo.avatar.attached? %>
   <div>
