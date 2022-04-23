@@ -13,6 +13,7 @@ puts "Start seeding Categories"
 
 Photo.destroy_all
 Category.destroy_all
+
 names_cover = %w[animals_cover.png fruits_and_vegetables_cover.png nature_cover.png people_cover.png tech_cover.png wallpaper_cover.png]
 6.times do |n|
   category = Category.create(
