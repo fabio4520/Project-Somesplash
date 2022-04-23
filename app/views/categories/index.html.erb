@@ -1,20 +1,28 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
-
+<h1>Categories</h1>
+<%= link_to "NEW CATEGORY",  new_category_path() %><!--AUQI FLATA ALGO (...)-->
 <% @categories.each do |category| %>
-  <div>
-
-      <% if category.avatar.attached? %>
-      <div>
-        <%= image_tag category.avatar %>
-      </div>
+    <div>
+      <%# <%= image_tag "image.jpg", class: "some css class here" %> 
+      
+      <%= link_to category_path(category) do %>
+        <% if category.avatar.attached? %>
+        <div>
+          <%= image_tag category.avatar %>
+        </div>
+        <% end %>
       <% end %>
 
-    <div>
-      <h2><%= category.name  %></h2>
-      <span> Cantidad de fotos: <%= category.photos_count  %></span>
-      <p><%= category.description  %></p>
+      <div>
+        <h2><%= category.name  %></h2>
+        <span> Cantidad de fotos: <%= category.photos_count  %></span>
+        <p><%= category.description  %></p>
+      </div>
+      <%# MOSTAR CANTIDAD DE COMENTARIOS %> 
+      <span> <%= link_to "Edit", edit_category_path(category) %></span>
+      <span><%= link_to "Destroy", category_path(category), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure? ಥ_ಥ"
+                  } %></span>
     </div>
-
-  </div>
+  
 <% end %>

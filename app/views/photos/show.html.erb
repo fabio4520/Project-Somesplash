@@ -1,0 +1,10 @@
+<h2> <%= @photo.title %></h2>
+<p><%= @photo.subtitle %></p>
+<p><%= params %></p>
+<% if @photo.avatar.attached? %>
+  <div>
+    <%= image_tag @photo.avatar %>
+  </div>
+<% end %>
+
+<%# COMENTARIOS %>
