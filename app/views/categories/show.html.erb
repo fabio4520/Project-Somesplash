@@ -1,7 +1,10 @@
 <h1><%= @category.name %></h1>
 <p><%= @category.description %></p>
 
-<p><%= params  %></p>
+
+<span> <%= link_to "New photo", new_photo_path(category_id: @category.id) %></span>
+
+
 <% @photos.each do |photo| %>
   <div> 
     <%= link_to photo_path(photo) do %>
@@ -19,9 +22,11 @@
     </div>
     <span> <%= link_to "Edit", edit_photo_path(photo) %></span>
       <span><%= link_to "Destroy", photo_path(photo), data: {
-                    turbo_method: :delete,
+        turbo_method: :delete,
                     turbo_confirm: "Are you sure ಥ_ಥ?"
                   } %></span>
   </div>
+
+<span> <%= link_to "Back", "/categories/" %></span>
 
 <% end %>
