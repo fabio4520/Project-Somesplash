@@ -1,8 +1,8 @@
-<h1><%= @category.name %></h1>
+<h1 class = "title"><%= @category.name %></h1>
 <p><%= @category.description %></p>
 
 
-<span> <%= link_to "New photo", new_photo_path(category_id: @category.id) %></span>
+<%= link_to "New photo", new_photo_path(category_id: @category.id), class: "button--primary" %>
 
 
 <% @photos.each do |photo| %>
@@ -10,13 +10,13 @@
     <%= link_to photo_path(photo) do %>
       <% if photo.avatar.attached? %>
         <div>
-          <%= image_tag photo.avatar %>
+          <%= image_tag photo.avatar, class: "cover_image" %>
         </div>
       <% end %>
     <% end %>
 
-    <h2><%= photo.title %></h2>
-    <p><%= photo.subtitle %></p>
+    <h2 class="subtitle"><%= photo.title %></h2>
+    <p class = "description"><%= photo.subtitle %></p>
     <p>Aqui irian los comentarios si tuvieramos :v <%= photo.comments_count %> ->>>>></p>
     <%# aqui van esos 2 iconitos locos %>
     </div>

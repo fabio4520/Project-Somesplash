@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :categories
   resources :photos
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "categories#index"
 end
