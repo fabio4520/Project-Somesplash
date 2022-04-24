@@ -9,7 +9,7 @@
       
       <%= link_to category_path(category) do %>
         <% if category.avatar.attached? %>
-        <div class = "hola">
+        <div>
           <%= image_tag category.avatar, class: "cover_image" %>
         </div>
         <% end %>

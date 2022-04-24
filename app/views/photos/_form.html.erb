@@ -1,7 +1,7 @@
 <%= form_with model: photo do |form| %>
   <div>
     <%= form.label "Title", class: "attributes"  %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: "Big Mountain", class: "border" %>
     <% photo.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -9,7 +9,7 @@
 
   <div>
     <%= form.label "Description", class: "attributes"  %><br>
-    <%= form.text_area :subtitle %>
+    <%= form.text_area :subtitle, placeholder: "Photo taken on...", class: "input--text border" %>
     <% photo.errors.full_messages_for(:subtitle).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -25,7 +25,7 @@
 
   <div>
     <%= form.label :avatar, class: "attributes"  %><br>
-    <%= form.file_field :avatar, accept: "image/png, image/jpeg" %>
+    <%= form.file_field :avatar, accept: "image/png, image/jpeg", class: "margin" %>
   </div>
 
   <div>

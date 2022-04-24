@@ -1,5 +1,5 @@
 <h1 class = "title"><%= @category.name %></h1>
-<p><%= @category.description %></p>
+<p class="margin"><%= @category.description %></p>
 
 
 <%= link_to "New photo", new_photo_path(category_id: @category.id), class: "button--primary" %>

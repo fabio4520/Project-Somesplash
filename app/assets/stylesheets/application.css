@@ -17,26 +17,20 @@
 @import url("fonts.css");
 @import url("colors.css");
 
-/* Header starts */
-
-/* Header ends*/
-
-
 /* Main starts */
+
 body
 {
   font-family: var(--font-secondary);
 }
-/* Index Show */
-.title
-{
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 3.6rem;
-  text-align: center;
-  color: var(--gray-800);
-}
+
+/* Index starts */
+@import url("index.css");
+/* Index ends */
+
+
+/* Global */
+
 .button--primary {
   list-style: none;
   text-decoration: none;
@@ -57,46 +51,17 @@ body
   outline: 2px solid var(--blue-oxford);
   outline-offset: 2px;
 }
-.cover_image
-{
-  max-width: 800px;
-  max-height: 500px;
-  border-radius: 10px;
-  margin-block-start: 16px;
-}
+
 .center
 {
   display: flex;
   justify-content: center
 }
-.info
-{
-  margin: 16px;
-}
-.subtitle
-{
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  color: var(--gray-400);
-}
-.photos_counter
-{
-  color: var(--gray-300);
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2rem;
 
-}
-.description
+::placeholder
 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.4rem;
+  color: var(--gray-200)
 }
-
-/* New */
 .attributes
 {
   font-weight: 400;
@@ -104,14 +69,17 @@ body
   line-height: 1.6rem;
   color: var(--gray-600);
 }
-::placeholder
-{
-  color: var(--gray-200)
-}
-
 .margin
 {
   margin-block-end: 16px;
+}
+.border
+{
+  border-radius: 10px;
+}
+.input--text
+{
+  width: 300px;
 }
 
 /* Main ends */
@@ -120,9 +88,6 @@ body
 
 
 /* Footer starts*/
-footer
-{
-  margin: 0 auto;
-}
+@import url("footer.css");
 
 /* Footer ends*/
