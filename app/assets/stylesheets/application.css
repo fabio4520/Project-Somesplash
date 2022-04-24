@@ -13,3 +13,83 @@
  *= require_tree .
  *= require_self
  */
+@import url("reset.css");
+@import url("fonts.css");
+@import url("colors.css");
+
+/* Header starts */
+
+/* Header ends*/
+
+
+/* Main starts */
+body
+{
+  font-family: var(--font-secondary);
+}
+.title
+{
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: var(--gray-800);
+}
+.button--primary {
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  background-color: var(--blue-oxford);
+  color: var(--white);
+  max-width: 200px;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.button--primary:hover {
+  background: #fff;
+  color: var(--blue-oxford);
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+.button--primary:focus {
+  outline: 2px solid var(--blue-oxford);
+  outline-offset: 2px;
+}
+.cover_image
+{
+  max-width: 800px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+.subtitle
+{
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--gray-400);
+}
+.photos_counter
+{
+  color: var(--gray-300);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+}
+.description
+{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+/* Main ends */
+
+
+
+
+/* Footer starts*/
+
+
+/* Footer ends*/
