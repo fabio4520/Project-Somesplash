@@ -51,5 +51,47 @@ people_arr = %w[image\ 19.png image\ 20.png image\ 21.png image\ 22.png image\ 2
 end
 
 #tech
+tech_arr = %w[image\ 29.png image\ 30.png image\ 31.png image\ 32.png image\ 33.png]
+5.times do |n|
+  tech = Photo.create(
+    title: Faker::Book.title,
+    subtitle: Faker::Lorem.paragraph,
+    category: Category.find(Category.first.id + 4)
+  )
+  tech.avatar.attach( io: File.open("db/images/tech/#{tech_arr[n]}"), filename: "tech_#{n}.png")
+end
+
+#wallpaper
+wallpaper_arr = %w[image\ 16.png image\ 17.png image\ 18.png]
+3.times do |n|
+  wpaper = Photo.create(
+    title: Faker::Book.title,
+    subtitle: Faker::Lorem.paragraph,
+    category: Category.find(Category.first.id + 5)
+  )
+  wpaper.avatar.attach( io: File.open("db/images/wallpapers/#{wallpaper_arr[n]}"), filename: "wpaper_#{n}.png")
+end
+
+#fruits and vegetables
+fruitveggie_arr = %w[image\ 25.png image\ 26.png image\ 27.png image\ 28.png]
+4.times do |n|
+  fruitveggie = Photo.create(
+    title: Faker::Book.title,
+    subtitle: Faker::Lorem.paragraph,
+    category: Category.find(Category.first.id + 1)
+  )
+  fruitveggie.avatar.attach( io: File.open("db/images/fruits_and_vegetables/#{fruitveggie_arr[n]}"), filename: "fruitveggie_#{n}.png")
+end
+
+#nature
+nature_arr = %w[image\ 3.png image\ 5.png image\ 6.png image\ 7.png image\ 9.png]
+5.times do |n|
+  nature = Photo.create(
+    title: Faker::Book.title,
+    subtitle: Faker::Lorem.paragraph,
+    category: Category.find(Category.first.id + 2)
+  )
+  nature.avatar.attach( io: File.open("db/images/nature/#{nature_arr[n]}"), filename: "nature_#{n}.png")
+end
 
 puts "Finish seeding Photos"
