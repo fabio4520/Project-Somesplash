@@ -1,0 +1,45 @@
+/* INDEX */
+.title
+{
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: var(--gray-800);
+}
+
+.cover_image
+{
+  max-width: 800px;
+  max-height: 500px;
+  border-radius: 10px;
+  margin-block-start: 16px;
+}
+
+.subtitle
+{
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--gray-400);
+}
+.photos_counter
+{
+  color: var(--gray-300);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+}
+.description
+{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.info
+{
+  margin: 16px;
+}

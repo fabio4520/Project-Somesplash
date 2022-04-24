@@ -1,28 +1,28 @@
 <%= form_with model: category do |form| %>
   <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: "attributes" %><br>
+    <%= form.text_field :name, placeholder: "Technology"%>
     <% category.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
+    <%= form.label :description, class: "attributes"  %><br>
+    <%= form.text_area :description, placeholder: "Exploring our complicated relationship with technology..."%>
     <% category.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :avatar %><br>
-    <%= form.file_field :avatar, accept: "image/png, image/jpeg" %>
+    <%= form.label :avatar, class: "attributes"  %><br>
+    <%= form.file_field :avatar, accept: "image/png, image/jpeg", class: "margin" %>
   </div>
 
-  <div>
+  <div class = "margin">
     <%= form.submit %>
   </div>
 
-  <span> <%= link_to "Back", "/categories/" %></span>
+  <%= link_to "Back", "/categories/", class: "button--primary" %>
 <% end %>

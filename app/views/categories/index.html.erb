@@ -1,36 +1,32 @@
-<section class = "section-md">
-  
-  <div class = "container-md">
-    <h1 class = "title" >Categories</h1>
 
-    <%= link_to "NEW CATEGORY",  new_category_path(), class: "button--primary" %>
+<h1 class = "title" >Categories</h1>
 
-    <% @categories.each do |category| %>
-        <div>
-          <%# <%= image_tag "image.jpg", class: "some css class here" %> 
-          
-          <%= link_to category_path(category) do %>
-            <% if category.avatar.attached? %>
-            <div>
-              <%= image_tag category.avatar, class: "cover_image" %>
-            </div>
-            <% end %>
-          <% end %>
+<%= link_to "NEW CATEGORY",  new_category_path(), class: "button--primary margin" %>
 
-          <div>
-            <h2><%= category.name  %></h2>
-            <span> Cantidad de fotos: <%= category.photos_count  %></span>
-            <p><%= category.description  %></p>
-          </div>
-          <%# MOSTAR CANTIDAD DE COMENTARIOS %> 
-          <span> <%= link_to "Edit", edit_category_path(category) %></span>
-          <span><%= link_to "Destroy", category_path(category), data: {
-                        turbo_method: :delete,
-                        turbo_confirm: "Are you sure? ಥ_ಥ"
-                      } %></span>
-        </div>
+<% @categories.each do |category| %>
+    <div class = "margin">
+      <%# <%= image_tag "image.jpg", class: "some css class here" %> 
       
-    <% end %>
-  </div>
+      <%= link_to category_path(category) do %>
+        <% if category.avatar.attached? %>
+        <div>
+          <%= image_tag category.avatar, class: "cover_image" %>
+        </div>
+        <% end %>
+      <% end %>
 
-</section>
+      <div class = "info">
+        <h2><%= category.name  %></h2>
+        <span> Cantidad de fotos: <%= category.photos_count  %></span>
+        <p><%= category.description  %></p>
+      </div>
+      <%# MOSTAR CANTIDAD DE COMENTARIOS %> 
+      <span> <%= link_to "Edit", edit_category_path(category) %></span>
+      <span><%= link_to "Destroy", category_path(category), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure? ಥ_ಥ"
+                  } %></span>
+    </div>
+  
+<% end %>
+

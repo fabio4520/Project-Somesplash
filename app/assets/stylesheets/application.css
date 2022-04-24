@@ -17,25 +17,20 @@
 @import url("fonts.css");
 @import url("colors.css");
 
-/* Header starts */
-
-/* Header ends*/
-
-
 /* Main starts */
+
 body
 {
   font-family: var(--font-secondary);
 }
-.title
-{
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 3.6rem;
-  text-align: center;
-  color: var(--gray-800);
-}
+
+/* Index starts */
+@import url("index.css");
+/* Index ends */
+
+
+/* Global */
+
 .button--primary {
   list-style: none;
   text-decoration: none;
@@ -56,40 +51,43 @@ body
   outline: 2px solid var(--blue-oxford);
   outline-offset: 2px;
 }
-.cover_image
+
+.center
 {
-  max-width: 800px;
-  max-height: 500px;
+  display: flex;
+  justify-content: center
+}
+
+::placeholder
+{
+  color: var(--gray-200)
+}
+.attributes
+{
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--gray-600);
+}
+.margin
+{
+  margin-block-end: 16px;
+}
+.border
+{
   border-radius: 10px;
 }
-.subtitle
+.input--text
 {
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  color: var(--gray-400);
+  width: 300px;
 }
-.photos_counter
-{
-  color: var(--gray-300);
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2rem;
 
-}
-.description
-{
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-}
 /* Main ends */
 
 
 
 
 /* Footer starts*/
-
+@import url("footer.css");
 
 /* Footer ends*/
