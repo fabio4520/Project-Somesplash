@@ -1,6 +1,6 @@
 <%= form_with model: photo do |form| %>
   <div>
-    <%= form.label "Title" %><br>
+    <%= form.label "Title", class: "attributes"  %><br>
     <%= form.text_field :title %>
     <% photo.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
@@ -8,7 +8,7 @@
   </div>
 
   <div>
-    <%= form.label "Description" %><br>
+    <%= form.label "Description", class: "attributes"  %><br>
     <%= form.text_area :subtitle %>
     <% photo.errors.full_messages_for(:subtitle).each do |message| %>
       <div><%= message %></div>
@@ -24,7 +24,7 @@
   </div>
 
   <div>
-    <%= form.label :avatar %><br>
+    <%= form.label :avatar, class: "attributes"  %><br>
     <%= form.file_field :avatar, accept: "image/png, image/jpeg" %>
   </div>
 

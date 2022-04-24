@@ -19,7 +19,7 @@
     <p class = "description"><%= photo.subtitle %></p>
     <p>Aqui irian los comentarios si tuvieramos :v <%= photo.comments_count %> ->>>>></p>
     <%# aqui van esos 2 iconitos locos %>
-    </div>
+    
     <span> <%= link_to "Edit", edit_photo_path(photo) %></span>
       <span><%= link_to "Destroy", photo_path(photo), data: {
         turbo_method: :delete,

@@ -12,18 +12,28 @@
   <body>
     <header>
       <img src="app/assets/images/header.png" draggable="true" ondragstart="drag(event)">
-
     </header>
-    <%= yield %>
+
+    <section class = "section-md">
+      <div class = "container-md">
+
+        <%= yield %>
+        
+      </div>
+    </section>
+
     <footer>
-      <p>Build with 👻👽😢</p>
+      <div class = "container-md">
+        <p>Build with 👻👽😢</p>
         <ul>
           <li><a href = "https://www.linkedin.com/in/fabio-fiestas/" target = _BLANK>Fabio Fiestas</li>
-          <%# Links are wrong, fix them %>
+          <%# Links are wrong, please put correct links. %>
           <li><a href = "https://www.linkedin.com/in/martin-ubillus/" target = _BLANK>Martin Ubillus</li> 
           <li><a href = "https://www.linkedin.com/in/johan-segura/" target = _BLANK>Johan Segura</li>
           <li><a href = "https://www.linkedin.com/in/marcos-segura/" target = _BLANK>Marcos Ramirez</li>
         </ul>
+      </div>
     </footer>
+
   </body>
 </html>
